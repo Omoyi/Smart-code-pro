@@ -9,4 +9,10 @@ public class MembersTest {
         assertEquals(testMembers.getName(),"Emma",1);
     }
 
+    @Test
+    public void Members_instantiatesWithDescription(){
+        Members testMembers = new Members("Emma","developer", 1);
+        assertEquals(testMembers.getDescription(),"Emma",1);
+    }
+
 }
