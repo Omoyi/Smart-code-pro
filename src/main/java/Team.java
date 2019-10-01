@@ -1,4 +1,7 @@
 import org.sql2o.Connection;
+import org.sql2o.Sql2oException;
+
+import java.awt.*;
 import java.util.List;
 
 public class Team {
@@ -44,4 +47,18 @@ public class Team {
             return con.createQuery(s).executeAndFetch(Team.class);
         }
     }
+//    @Override
+    public void update(String name, String description) {
+        String data="UPDATE team SET (name,description)=(:name,:description)";
+        try (Connection con= DB.sql2o.open()){
+            con.createQuery(data)
+                    .addParameter("name",name)
+                    .addParameter("description",description)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }catch (Sql2oException ex){
+            System.out.println(ex);
+        }
+    }
+
 }
