@@ -1,0 +1,39 @@
+
+{{#partial "content"}}
+    <section class="landing-pg">
+         <div class="land-left"></div>
+         <div class="land-right"></div>
+         <div class="cont">
+           <div class="form sign-in">
+           <form action="/newTeam" method="post">
+             <h2>Team</h2>
+             <label>
+               <span>Team Name</span>
+               <input type="teamName"  name="teamName"/>
+             </label>
+             <label>
+               <span>Team Leader</span>
+               <input type="teamLeader" name="teamLeader"/>
+             </label>
+                 <label>
+             <span>Email</span>
+               <input type="email" name="email"/>
+             </label>
+             <label>
+               <select name="language">
+               <option>Language</option>
+               <option>Java</option>
+               <option>Python</option>
+               <option>Php</option>
+               <option>JavaScript</option>
+               <option >Django</option>
+               <option >Android</option>
+               </select>
+             </label>
+             <button type="submit" class="submit">Add</button>
+  <form>
+           </div>
+
+    </section>
+{{/partial}}
+{{> layout.hbs}}
