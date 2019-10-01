@@ -60,5 +60,7 @@ public class Team {
             System.out.println(ex);
         }
     }
+    public void deleteById(int id) {
+    }
 
 }
