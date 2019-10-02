@@ -84,9 +84,10 @@ margin: 0.2em 2em;
     transform: rotate(30deg);
 }
 .runner img{
-    width: 64%;
+    width: 14%;
     z-index: 2;
-    margin-top: -9px;
+    margin-left: 12%;
+    margin-top: 500px;
 }
 .title-2{
     position: absolute;
