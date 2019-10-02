@@ -1,5 +1,4 @@
-public class App {
-  import spark.ModelAndView;
+import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.util.HashMap;
