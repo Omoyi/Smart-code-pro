@@ -3,35 +3,41 @@
     <section class="landing-pg">
          <div class="land-left"></div>
          <div class="land-right"></div>
-         <div class="cont">
-           <div class="form sign-in">
-           <form action="/newTeam" method="post">
-             <h2>Team</h2>
-             <label>
-               <span>Team Name</span>
-               <input type="teamName"  name="teamName"/>
-             </label>
-             <label>
-               <span>Team Leader</span>
-               <input type="teamLeader" name="teamLeader"/>
-             </label>
-                 <label>
-             <span>Email</span>
-               <input type="email" name="email"/>
-             </label>
-             <label>
-               <select name="language">
-               <option>Language</option>
-               <option>Java</option>
-               <option>Python</option>
-               <option>Php</option>
-               <option>JavaScript</option>
-               <option >Django</option>
-               <option >Android</option>
-               </select>
-             </label>
-             <button type="submit" class="submit">Add</button>
-  <form>
+         <div class="form">
+          <form action="/Team" method="post">
+           <div class="login left flex-box">
+           <h1>Welcome</h1>
+              <p>It's a pleasure to see you here, fill the form to add a team</p>
+
+
+           </div>
+           <div class="create-account left flex-box">
+{{!--              <h1>Team Member</h1> --}}
+{{!--              <input type="Name1" placeholder="Name1:"> --}}
+{{!--              <input type="Name2" placeholder="Name2"> --}}
+{{!--              <input type="Name3" placeholder="Name3"> --}}
+{{!--              <input type="Name4" placeholder="Name4"> --}}
+{{!--              <button class="button-animate">submit</button> --}}
+           </div>
+           <div class="outer">
+             <div class="inner flex-box">
+               <div class="sign-in overlay-form flex-box">
+{{!--             <h1>Create a Team</h1> --}}
+{{!--                                <input type="text" name="teamName"placeholder="Leader"> --}}
+{{!--                                <input type="text" name="teamLeader" placeholder="Team Name"> --}}
+{{!--                                <input type="text" name="email" placeholder="Email"> --}}
+{{!--                                <input type="text" name="language" placeholder="language"> --}}
+{{!--                          <button class="button-animate">Subscribe</button> --}}
+               </div>
+               <div class="sign-up overlay-form flex-box">
+                 <h1>Create a Team</h1>
+                        <input type="text" name="teamName" placeholder="Leader">
+                        <input type="text" name="teamLeader" placeholder="Team Name">
+                         <input type="text" name="email" placeholder="Email">
+                          <input type="text" name="language" placeholder="language">
+                          <button class="button-animate">Subscribe</button>
+               </div>
+             </div>
            </div>
 
     </section>

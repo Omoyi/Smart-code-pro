@@ -9,12 +9,12 @@ public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
 
-        get("/newTeam", (req, res) -> {
+        get("/Team", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "teamform.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/newTeam",(req,res)-> {
+        post("/Team",(req,res)-> {
             Map<String, Object> model = new HashMap<>();
             String teamName= req.queryParams("teamName");
             String teamLeader = req.queryParams("teamLeader");
@@ -29,7 +29,7 @@ public class App {
             model.put("email", email);
             model.put("language", language);
             System.out.println(newTeam);
-            res.redirect("/newTeam");
+            res.redirect("/Team");
             return new ModelAndView(model,"teamform.hbs");
         }, new HandlebarsTemplateEngine());
 
