@@ -1,0 +1,44 @@
+{{#partial "content"}}
+    <section class="landing-pg">
+         <div class="land-left"></div>
+         <div class="land-right"></div>
+
+<div class="form">
+ <form action="/Team" method="post">
+  <div class="login left flex-box">
+  <h1>Welcome</h1>
+      <p>Hello it's a pleasure to see you, Fill the form to  Subscribe a team</p>
+
+  </div>
+  <div class="create-account left flex-box">
+    <h1>Team Member</h1>
+    <input type="Name1" placeholder="Name1:">
+    <input type="Name2" placeholder="Name2">
+    <input type="Name3" placeholder="Name3">
+    <input type="Name4" placeholder="Name4">
+    <button class="button-animate">submit</button>
+  </div>
+  <div class="outer">
+    <div class="inner flex-box">
+      <div class="sign-in overlay-form flex-box">
+    <h1>Hi</h1>
+           <p>Want to add your Team Member</p>
+           <button id="signUp">Add</button>
+
+      </div>
+      <div class="sign-up overlay-form flex-box">
+
+        <h1>Create a Team</h1>
+                     <input type="text" name="teamName" placeholder="Leader">
+                     <input type="text" name="teamLeader" placeholder="Team Name">
+                     <input type="text" name="email" placeholder="Email">
+                     <input type="text" placeholder="language">
+               <button class="button-animate">Subscribe</button>
+      </div>
+    </div>
+  </div>
+ </form>
+</div>
+</section>
+{{/partial}}
+{{> layout.hbs}}
