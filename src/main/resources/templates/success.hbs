@@ -1,0 +1,23 @@
+{{#partial "content"}}
+<div class="corner"><h2>Pending page</h2>
+
+{{#if TeamformList}}
+       {{#each TeamformList}}
+           <div class="container" id="col">
+               <div class="well" style="width:45%;margin-left:25%;margin-top:5%">
+                   <p style="color:black;font-size:25px">Team_ Leader:{{teamleader}} </p>
+                   <p style="color:black;font-size:25px">Team_Name:{{teamname}}</p>
+                   <p style="color:black;font-size:25px">Email:{{email}}</p>
+                   <p  style="text-align:center;margin-top:15%;color:black;font-size:20px;font-weight:bold">"Our team will study your application. We will get back to you by e-mail within few days"</p>
+                   <br>
+               </div>
+           </div>
+       {{/each}}
+   {{else}}
+       <p style="text-align:center;margin-top:15%;color:black;font-size:40px;font-weight:bold">No team added</p>
+   {{/if}}
+
+</div>
+
+{{/partial}}
+{{> layout.hbs}}

@@ -1,0 +1,1 @@
+CREATE TABLE form(id SERIAL PRIMARY KEY ,teamName VARCHAR,teamLeader VARCHAR,email VARCHAR);

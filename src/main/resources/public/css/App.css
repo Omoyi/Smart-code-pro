@@ -30,15 +30,7 @@ body {
   text-align: center;
   transition: 0.6s linear;
 }
-.right{
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: white;
-  text-align: center;
-  transition: 0.6s linear;
-}
+
 h1 {
   text-transform: uppercase;
   font-family: "Merienda";
@@ -189,4 +181,105 @@ p {
 .form.translate .sign-up {
   transform: translateX(80%);
 }
+}
+div {
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    float: left;
+    height: 220px;
+    margin: 50px 0 0 45px;
+    position: relative;
+    text-align: center;
+    width: 210px;
+
+}
+
+div h2 {
+    background: #08b;
+    background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.2));
+    border: 0 solid rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
+}
+div.folded:before, div.folded:after {
+    bottom: 26px;
+    box-shadow: 0 28px 8px rgba(0,0,0,0.5);
+    content: "";
+    height: 28px;
+    position: absolute;
+    width: 48%;
+    z-index: -1;
+}
+div.folded:before {
+    left: 2%;
+    transform: rotate(-3deg);
+}
+div.folded:after {
+    right: 2%;
+    transform: rotate(3deg);
+}
+div.folded h2 {
+    border-width: 1px 1px 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 4px 40px;
+    position: absolute;
+    right: -14px;
+    top: 12px;
+}
+div.folded h2:after {
+    border-width: 7px;
+    border-style: solid;
+    border-color: #134 transparent transparent #134;
+    bottom: -15px;
+    content: "";
+    position: absolute;
+    right: -1px;
+}
+div.banner {
+  z-index: -1;
+}
+div.banner h2 {
+    border-radius: 0 0 5px 5px;
+    border-width: 0 1px 1px 1px;
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    display: inline-block;
+    margin: -1px auto 0;
+    padding: 4px 28px;
+}
+div.banner h2:before, div.banner h2:after {
+    bottom: 4px;
+    box-shadow: 0 6px 5px rgba(0,0,0,0.4);
+    content: "";
+    height: 10px;
+    position: absolute;
+    width: 47%;
+    z-index: -1;
+}
+div.banner h2::before {
+    left: 3%;
+    transform: rotate(-3.5deg);
+}
+div.banner h2::after {
+    right: 3%;
+    transform: rotate(3.5deg);
+}
+
+div.corner {
+    overflow: hidden;
+}
+div.corner h2 {
+    background-image: linear-gradient(0deg, transparent 50%, rgba(0, 0, 0, 0.3));
+    border-width: 1px 0;
+    border-color: rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    padding: 4px 34px 4px 80px;
+    position: absolute;
+    right: -12px;
+    top: -18px;
+    transform: rotate(20deg);
 }
