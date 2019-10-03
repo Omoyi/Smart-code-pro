@@ -12,7 +12,11 @@ public class MembersTest {
     @Test
     public void Members_instantiatesWithDescription(){
         Members testMembers = new Members("Emma","developer", 1);
-        assertEquals(testMembers.getDescription(),"Emma",1);
+        assertEquals(testMembers.getDescription(),"developer",1);
     }
-
+    @Test
+    public void Members_instantiatesWithId(){
+        Members testMembers = new Members("Emma","developer", 1);
+        assertEquals(testMembers.getId(),1);
+    }
 }
