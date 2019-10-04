@@ -11,6 +11,7 @@ public class App {
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
+
         return 4567;
     }
     public static void main(String[] args) {
@@ -19,6 +20,16 @@ public class App {
         get("/", (request, response) ->{
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "index.hbs");
+        },new HandlebarsTemplateEngine());
+
+        get("/about", (request, response) ->{
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "index.hbs");
+        },new HandlebarsTemplateEngine());
+
+        get("/project", (request, response) ->{
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "project1.hbs");
         },new HandlebarsTemplateEngine());
     }
 }

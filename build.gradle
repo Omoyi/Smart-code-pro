@@ -20,5 +20,5 @@ dependencies {
     compile ('org.webjars:jquery:2.1.4')
 //    js group: 'jquery', name: 'jquery', version: '1.6.4', classifier: 'min', ext: "js"
 //    compile group: 'org.postgresql', name: 'postgresql', version: '422..2'
-//    compile group:'org.postgresql',name: 'postgresql',version: "9.4-1201-jdbc41"
+    compile group:'org.postgresql',name: 'postgresql',version: "9.4-1201-jdbc41"
 }
