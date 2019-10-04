@@ -52,7 +52,7 @@ public class Teamform {
 
     public static List<Teamform> all() {
         String sql = "SELECT * FROM team";
-        try(Connection con = DB1.sql2o.open()) {
+        try(Connection con = DB2.sql2o.open()) {
             return con.createQuery(sql).executeAndFetch(Teamform.class);
         }
     }

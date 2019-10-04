@@ -35,6 +35,11 @@ h1 {
   font-family: "Merienda";
   margin-bottom: 15px;
 }
+h2{
+ font-family: "Merienda";
+}
+
+
 input {
   display: block;
   width: 72%;
@@ -142,9 +147,7 @@ button {
   transition: 0.6s linear;
 }
 p {
-  font-family: "Kaushan Script";
-  letter-spacing: 1px;
-  font-size: 25px;
+  font-family: 'Lora', serif;
 }
 /*after the translate class added or remove*/
 
@@ -181,7 +184,7 @@ p {
   transform: translateX(80%);
 }
 .read-more{
-     border: #725752 !important;
+    border: #725752 !important;
     width: 100px;
     margin: 0 auto;
     height: 35px;
@@ -215,11 +218,13 @@ p {
     transition-timing-function: ease-in;
     transition-duration: .3s;
 
+.well{
+ border:dashed;
 
 }
 
 .card:hover{
-    box-shadow:     0px 0 10px 5px #00000080 !important;
+    box-shadow: 0px 0 10px 5px #00000080 !important;
     transition-timing-function: ease-in;
     transition-duration: .3s;
 

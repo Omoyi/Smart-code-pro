@@ -1,34 +1,36 @@
 
 import org.sql2o.Connection;
 
+import java.util.List;
+import java.util.Objects;
+
 public class Team1 {
-    private String team_Name;
-    private String team_Leader;
+    private String teamname;
+    private String teamleader;
     private String email;
-    private String language;
     private int id;
 
-    public Team1(String team_Name, String team_Leader, String email, String language) {
-        this.team_Name = team_Name;
-        this.team_Leader = team_Leader;
+    public Team1(String teamname, String teamleader, String email) {
+        this.teamname = teamname;
+        this.teamleader = teamleader;
         this.email = email;
-        this.language = language;
+
     }
 
-    public String getTeam_name() {
-        return team_Name;
+    public String getTeamname() {
+        return teamname;
     }
 
-    public void setTeam_name(String team_name) {
-        this.team_Name = team_name;
+    public void setTeamname(String teamname) {
+        this.teamname = teamname;
     }
 
-    public String getTeam_leader() {
-        return team_Leader;
+    public String getTeamleader() {
+        return teamleader;
     }
 
-    public void setTeam_leader(String team_leader) {
-        this.team_Leader = team_leader;
+    public void setTeamleader(String teamleader) {
+        this.teamleader = teamleader;
     }
 
     public String getEmail() {
@@ -39,14 +41,6 @@ public class Team1 {
         this.email = email;
     }
 
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
     public int getId() {
         return id;
     }
@@ -55,18 +49,39 @@ public class Team1 {
         this.id = id;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Team1)) return false;
+        Team1 team1 = (Team1) o;
+        return id == team1.id &&
+                Objects.equals(teamname, team1.teamname) &&
+                Objects.equals(teamleader, team1.teamleader) &&
+                Objects.equals(email, team1.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(teamname, teamleader, email, id);
+    }
+
     public void save() {
-        try(Connection con = DB1.sql2o.open()) {
-            String sql = "INSERT INTO team(team_Name, team_Leader,email,language) VALUES (:team_Name, :team_Leader, :email, :language)";
+        try(Connection con = DB2.sql2o.open()) {
+            String sql = "INSERT INTO form(teamname, teamleader,email) VALUES (:teamname, :teamleader, :email)";
             this.id=(int) con.createQuery(sql,true)
-                    .addParameter("team_Name", this.team_Name)
-                    .addParameter("team_Leader", this.team_Leader)
+                    .addParameter("teamname", this.teamname)
+                    .addParameter("teamleader", this.teamleader)
                     .addParameter("email", this.email)
-                    .addParameter("language", this.language)
                     .executeUpdate()
                     .getKey();
 
         }
 
+    }
+    public static List<Team1> all() {
+        String sql = "SELECT * FROM form";
+        try(Connection con = DB2.sql2o.open()) {
+            return con.createQuery(sql).executeAndFetch(Team1.class);
+        }
     }
 }

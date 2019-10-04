@@ -10,58 +10,34 @@ public class App1 {
     public static void main(String[] args) {
         staticFileLocation("/public");
 
-        get("/newTeam", (req, res) -> {
+
+        get("/Team1", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "teamform.hbs");
+            return new ModelAndView(model, "form.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/Team",(req,res)-> {
+
+        post("/Team1",(req,res)-> {
             Map<String, Object> model = new HashMap<>();
-            String teamName= req.queryParams("team_Name");
-            String teamLeader = req.queryParams("team_Leader");
+            String teamname= req.queryParams("teamname");
+            String  teamleader  = req.queryParams("teamleader");
             String email = req.queryParams("email");
-            String language = req.queryParams("language");
-            Team1 newTeam = new Team1(teamName,teamLeader,email,language);
+            Team1 newTeam = new Team1(teamname,teamleader,email);
             newTeam.save();
-//            req.session().attribute("item",newTeam);
-//            model.put("item",req.session().attribute("item"));
-//            model.put("teamName", teamName);
-//            model.put("teamLeader", teamLeader);
-//            model.put("email", email);
-//            model.put("language", language);
+            req.session().attribute("item",newTeam);
+            model.put("item",req.session().attribute("item"));
+            model.put("teamname", teamname);
+            model.put("teamleader", teamleader);
+            model.put("email", email);
             System.out.println(newTeam);
             res.redirect("/pending");
             return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/Team",(req,res)-> {
-            Map<String, Object> model = new HashMap<>();
-            String teamName= req.queryParams("team_Name");
-            String teamLeader = req.queryParams("team_Leader");
-            String email = req.queryParams("email");
-            String language = req.queryParams("language");
-            Team1 newTeam = new Team1(teamName,teamLeader,email,language);
-            newTeam.save();
-            req.session().attribute("item",newTeam);
-            model.put("item",req.session().attribute("item"));
-            model.put("team_Name", teamName);
-            model.put("team_Leader", teamLeader);
-            model.put("email", email);
-            model.put("language", language);
-//            System.out.println(newTeam);
-            res.redirect("/pending");
-            return new ModelAndView(model,"success.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        get("/Team", (req, res) -> {
-            Map<String, Object> model = new HashMap<>();
-
-            return new ModelAndView(model, "form.hbs");
-        }, new HandlebarsTemplateEngine());
 
         get("/pending", (req, res) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            List<Teamform> item = Teamform.all();
+            List<Team1> item = Team1.all();
            model.put("item",item);
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());

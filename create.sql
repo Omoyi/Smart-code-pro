@@ -1,1 +1,1 @@
-CREATE TABLE form(id SERIAL PRIMARY KEY ,team_Name VARCHAR,teamLeader VARCHAR,email VARCHAR);
+CREATE TABLE form(id SERIAL PRIMARY KEY ,teamname VARCHAR,teamleader VARCHAR,email VARCHAR);
