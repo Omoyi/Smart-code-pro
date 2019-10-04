@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #ccc;
+
 }
 .flex-box {
   display: flex;
@@ -34,6 +34,7 @@ h1 {
   text-transform: uppercase;
   font-family: "Merienda";
   margin-bottom: 15px;
+ color: black;
 }
 h2{
  font-family: "Merienda";
@@ -68,12 +69,12 @@ button {
   margin: 23px auto 0;
   padding: 17px 20px;
   cursor: pointer;
-  border: none;
+  border:0;
   border-radius: 30px;
   font-size: 19px;
   font-family: "Merienda";
   text-transform: capitalize;
-  background: linear-gradient(to left, #fff, #dbd3d3);
+ background:black;
   position: relative;
 }
 .button-animate::after {
@@ -83,10 +84,14 @@ button {
   left: 0;
   height: 100%;
   width: 100%;
-  background: transparent;
+  color:black;
   border: 1px solid #a7a4a4;
   transform: scale(0);
   transition: 0.3s linear;
+}
+.button-animate{
+color:black;
+}
 }
 .button-animate:hover::after {
   animation: buttonanimate 0.3s linear;
@@ -113,7 +118,7 @@ button {
   right: 0;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to top, #ee0979, #ff6a00);
+background:#e6faff;
   color: white;
   z-index: 100;
   overflow: hidden;
