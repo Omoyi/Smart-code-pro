@@ -1,70 +1,123 @@
-{{#partial "title" }}
+{{#partial "content" }}
     welcome to members of team
 {{/partial}}
 
 <!--members.hbs.-->
 {{#partial "content"}}
-    <div class="about__section"> <!-- Specificity container -->
-        <a href="javascript:void(0);" title="Koby Conrad - CEO"><div class="about__slot">
-            <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('images/rachel.jpg');"></div>
-            <div class="about__info">
-                <h4 class="name">Uwimana Rachel</h4>
-                <h5 class="title">mobile application</h5>
+
+    <section class="our-team-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/rachel.jpg" height="150px">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Uwimana Rachel</h3>
+                            <br>
+                            <span class="post"><strong>Mobile application developer</strong></span><p><br>"One of my most productive days was throwwing away 1000 lines of code  </p>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#"  target="_blank"class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/flower.JPG">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Umurerwa L.Flower</h3>
+                             <br>
+                            <span class="post"><strong>Mobile application </strong></span><br><p>“Progress is possible only if we train ourselves to think about programs without thinking of them as pieces of executable code.” </p>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/cloudine.jpeg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Umuhire Claudine</h3>
+                            <br>
+                            <span class="post"><strong>Mobile application</strong> </span><p>“Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live”</p>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/emma.jpg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Nyirate Emma</h3>
+                           <br>
+                            <span class="post"><strong>Mobile application</strong> </span><p>“Any code of your own that you haven’t looked at for six or more months might as well have been written by someone else.” </p>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="bioText"><h3>Uwimana Rachel is a lorem ipsum dalor set amet consectur adipscing.</h3></div>
+        </div>
 
-        </div></a><a href="javascript:void(0);" title="Nicholas Butler - CTO"><div class="about__slot bio">
-
-            <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('/images/emma.jpg');"></div>
-
-            <div class="about__info">
-                <h4 class="name">Nyirate Emma</h4>
-                <h5 class="title">Chief Technology Officer</h5>
-            </div>
-            <div class="bioText">
-                <h3>Nyirate emmais a mobile application  developer, graphic designer, and entrepreneur.</h3>
-            </div>
-
-
-        </div></a><a href="javascript:void(0);" title="Riley Brunet - Creative Director"><div class="about__slot"><div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('images/cloudine.jpeg');"></div>
-            <div class="about__info">
-                <h4 class="name">Umuhire claudine</h4>
-                <h5 class="title">Mobile application </h5>
-            </div>
-            <div class="bioText"><h3>Umuhire Claudine is a lorem ipsum dalor set amet consectur adipscing.</h3></div>
-
-        </div></a><a href="javascript:void(0);" title="Harbor Neher - Account Manager"><div class="about__slot">
-            <div class="headshot"  onclick="biograph(this.parentNode);" style="background-image:url('/images/flower.JPG');"></div>
-
-            <div class="about__info">
-                <h4 class="name">Umurerwa L.Flower</h4>
-                <h5 class="title">Mobile application</h5>
-            </div>
-            <div class="bioText"><h3>Harbor Neher is a lorem ipsum dalor set amet consectur adipscing.</h3></div>
-
-<!--        </div></a><a href="javascript:void(0);" title="Sarah Spoja - Staff Writer"><div class="about__slot">-->
-<!--            <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('http://placekitten.com/284/284');"></div>-->
-
-<!--            <div class="about__info">-->
-<!--                <h4 class="name">Sarah Spoja</h4>-->
-<!--                <h5 class="title">Staff Writer</h5>-->
-<!--            </div>-->
-<!--            <div class="bioText">Sarah Spoja is a lorem ipsum dalor set amet consectur adipscing.<br><br>f g+ tw li</div>-->
-
-
-<!--        </div></a><a href="javascript:void(0);" title="Malik Ali - Account Manager"><div class="about__slot">-->
-<!--            <div class="headshot"  onclick="biograph(this.parentNode);" style="background-image:url('http://placekitten.com/294/294');"></div>-->
-
-<!--            <div class="about__info">-->
-<!--                <h4 class="name">Malik Ali</h4>-->
-<!--                <h5 class="title">Account Manager</h5>-->
-<!--            </div>-->
-<!--            <div class="bioText">Malik Ali is a lorem ipsum dalor set amet consectur adipscing.<br><br>f g+ tw li</div>-->
-
-<!--        </div></a>-->
-
-    </div>
-
+    </section>
 
     <!--members.hbs.-->
 {{/partial}}
