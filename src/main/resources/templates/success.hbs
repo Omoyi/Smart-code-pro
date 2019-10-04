@@ -1,0 +1,34 @@
+{{#partial "content"}}
+
+    <div class="row">
+
+        <div class="text-center mt-3"><h2>Pending page</h2>
+
+            <div class="col">
+                <div class="card-deck text-center" id="firstSetFlavours">
+
+                    <div class="card m-3">
+
+                        {{#if item}}
+                            {{#each item}}
+                                <div class="card-body">
+                                    <div class="well" style="width:45%;margin-left:25%;margin-top:5%">
+                                        <img src="https://744025.smushcdn.com/1245953/wp-content/uploads/2019/05/fabian-grohs-437907-unsplash.jpg?lossy=1&strip=1&webp=1" class="card-img-top w-75 mx-auto" alt="..."style=" height: 200px; width: 200px; margin-top:50px">
+                                        <p style="color:black;font-size:20px">Team_Leader:{{teamleader}} </p>
+                                        <p style="color:black;font-size:20px">Team_Name:{{teamname}}</p>
+                                        <p style="color:black;font-size:20px">Email:{{email}}</p>
+                                        <p  style="text-align:center;margin-top:15%;color:black;font-size:20px;font-weight:bold">"Our team will study your application. We will get back to you by e-mail within few days"</p>
+                                        <br>
+                                    </div>
+                                </div>
+                            {{/each}}
+
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{/partial}}
+{{> layout2.hbs}}

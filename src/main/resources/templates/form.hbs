@@ -1,0 +1,38 @@
+{{#partial "content"}}
+    <section class="landing-pg">
+        <div class="land-left"></div>
+        <div class="land-right"></div>
+
+        <div class="form">
+            <form action="/Team1" method="post">
+                <div class="login left flex-box">
+                    <h1>Welcome</h1>
+                    <p style="font-family:Kaushan Script;font-size:25px">Hello it's a pleasure to see you, Fill the form to  Subscribe a team</p>
+                </div>
+
+                <div class="outer">
+                    <div class="inner flex-box">
+                        <div class="sign-in overlay-form flex-box">
+
+
+                        </div>
+                        <div class="sign-up overlay-form flex-box">
+
+                            <h1>Subscribe a Team</h1>
+                            <input type="text" name="teamname" placeholder="Team Name">
+                            <input type="text" name="teamleader" placeholder="Leader">
+                            <input type="text" name="email" placeholder="Email">
+                            <button class="button-animate" style="color:black">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <style>
+   button:focus {
+       outline: none;
+   }
+</style>
+{{/partial}}
+{{> layout2.hbs}}

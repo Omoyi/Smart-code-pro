@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Merienda");
+* {
+  box-sizing: border-box;
+}
+body {
+
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form {
+  width: 70%;
+  height: 500px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  2: hidden;
+}
+.left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: white;
+  text-align: center;
+  transition: 0.6s linear;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: "Merienda";
+  margin-bottom: 15px;
+ color: black;
+}
+h2{
+ font-family: "Merienda";
+}
+
+
+input {
+  display: block;
+  width: 72%;
+  margin: 20px auto 0;
+  background: transparent;
+  padding: 10px 0px;
+  border: 0;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  font-family: "Kaushan Script";
+  letter-spacing: 1.5px;
+  word-spacing: 2.5px;
+}
+.forget {
+  font-family: "Kaushan Script";
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 20px 0 0;
+  color: rgb(0, 0, 255);
+}
+button {
+  width: 40%;
+  display: block;
+  margin: 23px auto 0;
+  padding: 17px 20px;
+  cursor: pointer;
+  border:0;
+  border-radius: 30px;
+  font-size: 19px;
+  font-family: "Merienda";
+  text-transform: capitalize;
+ background:black;
+  position: relative;
+}
+.button-animate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color:black;
+  border: 1px solid #a7a4a4;
+  transform: scale(0);
+  transition: 0.3s linear;
+}
+.button-animate{
+color:black;
+}
+}
+.button-animate:hover::after {
+  animation: buttonanimate 0.3s linear;
+}
+@keyframes buttonanimate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.create-account {
+  z-index: -1;
+}
+.outer {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+background:#e6faff;
+  color: white;
+  z-index: 100;
+  overflow: hidden;
+  transition: 0.6s linear;
+}
+.inner {
+  position: relative;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  flex-direction: row;
+  transition: 0.6s linear;
+}
+.overlay-form {
+  height: 100%;
+  width: 50%;
+  padding: 0px 40px;
+  text-align: center;
+}
+.overlay-form button {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+.sign-in {
+  transform: translateX(-80%);
+  transition: 0.6s linear;
+}
+.sign-up {
+  transition: 0.6s linear;
+}
+p {
+  font-family: 'Lora', serif;
+}
+/*after the translate class added or remove*/
+
+.form.translate .left {
+  transform: translateX(100%);
+}
+.form.translate .create-account {
+  opacity: 1;
+  z-index: 10;
+  animation: animateLeft 0.6s linear;
+}
+@keyframes animateLeft {
+  0%,
+  49% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 10;
+  }
+}
+.form.translate .outer {
+  transform: translateX(-100%);
+}
+.form.translate .inner {
+  transform: translateX(50%);
+}
+.form.translate .sign-in {
+  transform: translateX(0);
+}
+.form.translate .sign-up {
+  transform: translateX(80%);
+}
+.read-more{
+    border: #725752 !important;
+    width: 100px;
+    margin: 0 auto;
+    height: 35px;
+    padding: 5px;
+    color: #725752 !important;
+    font-size: 16px;
+    transform: 1s ease-in-out ;
+    overflow: hidden;
+
+}
+.read-more:hover {
+    background: #261500 !important;
+    border: #725752 !important;
+    width: 100px;
+    margin: 0 auto;
+    height: 35px;
+    padding: 5px;
+    color: #FBF2C0 !important;
+    font-size:16px;
+    transform: 1s ease-in-out ;
+    overflow: hidden;
+
+}
+#label1 {
+    border: 1px dashed #fbf2c0 !important;
+}
+
+.card {
+    border-radius: 10px !important;
+    border: 1px dashed #261500;
+    transition-timing-function: ease-in;
+    transition-duration: .3s;
+
+.well{
+ border:dashed;
+
+}
+
+.card:hover{
+    box-shadow: 0px 0 10px 5px #00000080 !important;
+    transition-timing-function: ease-in;
+    transition-duration: .3s;
+
+}
