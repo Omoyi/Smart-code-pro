@@ -30,7 +30,7 @@ public class Team {
     }
 
     public void save() {
-        try(org.sql2o.Connection con = DB.sql2o.open()) {
+        try(org.sql2o.Connection con = DB1.sql2o.open()) {
             String sql = "INSERT INTO team (name, description) VALUES (:name, :description)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
@@ -43,14 +43,14 @@ public class Team {
     public static List<Team> all() {
 
         String s="select * from team;";
-        try(Connection con = DB.sql2o.open()){
+        try(Connection con = DB1.sql2o.open()){
             return con.createQuery(s).executeAndFetch(Team.class);
         }
     }
 //    @Override
     public void update(String name, String description) {
         String data="UPDATE team SET (name,description)=(:name,:description)";
-        try (Connection con= DB.sql2o.open()){
+        try (Connection con= DB1.sql2o.open()){
             con.createQuery(data)
                     .addParameter("name",name)
                     .addParameter("description",description)
