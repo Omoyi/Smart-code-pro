@@ -4,33 +4,33 @@ import org.sql2o.Connection;
 import java.util.Objects;
 
 public class Team {
-    private String team_name;
-    private String team_leader;
+    private String team_Name;
+    private String team_Leader;
     private String email;
     private String language;
     private int id;
 
-    public Team(String team_name, String team_leader,String email,String language) {
-        this.team_name = team_name;
-        this.team_leader = team_leader;
+    public Team(String team_Name, String team_Leader,String email,String language) {
+        this.team_Name = team_Name;
+        this.team_Leader = team_Leader;
         this.email = email;
         this.language = language;
     }
 
     public String getTeam_name() {
-        return team_name;
+        return team_Name;
     }
 
     public void setTeam_name(String team_name) {
-        this.team_name = team_name;
+        this.team_Name = team_name;
     }
 
     public String getTeam_leader() {
-        return team_leader;
+        return team_Leader;
     }
 
     public void setTeam_leader(String team_leader) {
-        this.team_leader = team_leader;
+        this.team_Leader = team_leader;
     }
 
     public String getEmail() {
@@ -59,10 +59,10 @@ public class Team {
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO team(team_name, team_leader,email,language) VALUES (:team_name, :team_leader, :email, :language)";
+            String sql = "INSERT INTO team(team_Name, team_Leader,email,language) VALUES (:team_Name, :team_Leader, :email, :language)";
             this.id=(int) con.createQuery(sql,true)
-                    .addParameter("team_name", this.team_name)
-                    .addParameter("team_leader", this.team_leader)
+                    .addParameter("team_Name", this.team_Name)
+                    .addParameter("team_Leader", this.team_Leader)
                     .addParameter("email", this.email)
                     .addParameter("language", this.language)
                     .executeUpdate()

@@ -180,3 +180,47 @@ p {
 .form.translate .sign-up {
   transform: translateX(80%);
 }
+.read-more{
+     border: #725752 !important;
+    width: 100px;
+    margin: 0 auto;
+    height: 35px;
+    padding: 5px;
+    color: #725752 !important;
+    font-size: 16px;
+    transform: 1s ease-in-out ;
+    overflow: hidden;
+
+}
+.read-more:hover {
+    background: #261500 !important;
+    border: #725752 !important;
+    width: 100px;
+    margin: 0 auto;
+    height: 35px;
+    padding: 5px;
+    color: #FBF2C0 !important;
+    font-size:16px;
+    transform: 1s ease-in-out ;
+    overflow: hidden;
+
+}
+#label1 {
+    border: 1px dashed #fbf2c0 !important;
+}
+
+.card {
+    border-radius: 10px !important;
+    border: 1px dashed #261500;
+    transition-timing-function: ease-in;
+    transition-duration: .3s;
+
+
+}
+
+.card:hover{
+    box-shadow:     0px 0 10px 5px #00000080 !important;
+    transition-timing-function: ease-in;
+    transition-duration: .3s;
+
+}

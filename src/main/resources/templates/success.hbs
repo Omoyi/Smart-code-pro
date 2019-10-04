@@ -1,0 +1,46 @@
+{{#partial "content"}}
+<div class="corner"><h2>Pending page</h2>
+
+{{#if item}}
+       {{#each item}}
+           <div class="container" id="col">
+               <div class="well" style="width:45%;margin-left:25%;margin-top:5%">
+                   <p style="color:black;font-size:25px">Team_Leader:{{team_Leader}} </p>
+                   <p style="color:black;font-size:25px">Team_Name:{{team_Name}}</p>
+                   <p style="color:black;font-size:25px">Email:{{email}}</p>
+                   <p  style="text-align:center;margin-top:15%;color:black;font-size:20px;font-weight:bold">"Our team will study your application. We will get back to you by e-mail within few days"</p>
+                   <br>
+               </div>
+           </div>
+{{!--            {else}} --}}
+{{!--                       <p style="text-align:center;margin-top:15%;color:black;font-size:40px;font-weight:bold">No team added</p> --}}
+       {{/each}}
+
+   {{/if}}
+   {
+{{!-- <div class="row"> --}}
+{{!--             <div id="allFlavours" class="bg-peach"> --}}
+{{!--                 <h1 class="text-center mt-3">Different Flavors & Types of Chocolate</h1> --}}
+{{!--                 <div class="col"> --}}
+{{!--                     <div class="card-deck text-center" id="firstSetFlavours"> --}}
+
+{{!--                         <div class="card m-3"> --}}
+{{!--                             <img src="https://i.postimg.cc/QM4rBZdJ/replace-chocolate-drink.png" class="card-img-top w-75 mx-auto" alt="..."> --}}
+{{!--                             <div class="card-body"> --}}
+{{!--                                 <h5 class="card-title ">Milk Chocolate</i> </h5> --}}
+{{!--                                 <p class="card-text">Many have wondered how white chocolate can count as chocolate. --}}
+{{!--                                     White --}}
+{{!--                                     chocolate is made of cocoa butter, but it does not contain any cocoa solids. --}}
+{{!--                                     Instead, --}}
+{{!--                                     this type of chocolate contains only the fatty part -- the cocoa butter -- as well --}}
+{{!--                                     as --}}
+{{!--                                     milk and sugar.</p> --}}
+{{!--                                 <a class="btn bg-peach rounded read-more" href=""> Read More</small></a></p> --}}
+{{!--                             </div> --}}
+{{!--                         </div> --}}
+{{!--                     </div> --}}
+{{!--                 </div> --}}
+{{!--             </div> --}}
+{{!-- </div> --}}
+{{/partial}}
+{{> layout.hbs}}
