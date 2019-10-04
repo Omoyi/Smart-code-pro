@@ -27,5 +27,16 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "team3.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/4", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "team4.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
+        get("/5", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "team5.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
