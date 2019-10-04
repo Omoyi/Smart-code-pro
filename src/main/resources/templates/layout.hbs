@@ -29,9 +29,19 @@
 {{/block}}
 
 {{#block "content"}}
+    <div class="page"></div>
+    <script >
+  function biograph(e) {
+	if(e.className == 'about__slot') {
+		e.className = 'about__slot bio';
+	}
+	else {
+		e.className = 'about__slot';
+	}
+}
+</script>
 
+    </body>
+    </html>
 {{/block}}
 
-{{#block "footer"}}
-
-{{/block}}
