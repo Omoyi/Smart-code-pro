@@ -1,13 +1,12 @@
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.*;
-public class App {
+public class App1 {
     public static void main(String[] args) {
         staticFileLocation("/public");
 
@@ -22,7 +21,7 @@ public class App {
             String teamLeader = req.queryParams("team_Leader");
             String email = req.queryParams("email");
             String language = req.queryParams("language");
-            Team newTeam = new Team(teamName,teamLeader,email,language);
+            Team1 newTeam = new Team1(teamName,teamLeader,email,language);
             newTeam.save();
 //            req.session().attribute("item",newTeam);
 //            model.put("item",req.session().attribute("item"));
@@ -41,7 +40,7 @@ public class App {
             String teamLeader = req.queryParams("team_Leader");
             String email = req.queryParams("email");
             String language = req.queryParams("language");
-            Team newTeam = new Team(teamName,teamLeader,email,language);
+            Team1 newTeam = new Team1(teamName,teamLeader,email,language);
             newTeam.save();
             req.session().attribute("item",newTeam);
             model.put("item",req.session().attribute("item"));

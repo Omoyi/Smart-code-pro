@@ -1,16 +1,14 @@
 
 import org.sql2o.Connection;
 
-import java.util.Objects;
-
-public class Team {
+public class Team1 {
     private String team_Name;
     private String team_Leader;
     private String email;
     private String language;
     private int id;
 
-    public Team(String team_Name, String team_Leader,String email,String language) {
+    public Team1(String team_Name, String team_Leader, String email, String language) {
         this.team_Name = team_Name;
         this.team_Leader = team_Leader;
         this.email = email;
@@ -58,7 +56,7 @@ public class Team {
     }
 
     public void save() {
-        try(Connection con = DB.sql2o.open()) {
+        try(Connection con = DB1.sql2o.open()) {
             String sql = "INSERT INTO team(team_Name, team_Leader,email,language) VALUES (:team_Name, :team_Leader, :email, :language)";
             this.id=(int) con.createQuery(sql,true)
                     .addParameter("team_Name", this.team_Name)
